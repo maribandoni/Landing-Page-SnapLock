@@ -68,12 +68,4 @@ if (appDialog instanceof HTMLDialogElement) {
   });
 }
 
-const emailSignup = document.querySelector("#email-signup");
 
-if (emailSignup instanceof HTMLFormElement) {
-  emailSignup.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const status = emailSignup.querySelector(".email-signup-status");
-    if (status) status.textContent = "Não foi possível cadastrar: o serviço de e-mail ainda não está conectado.";
-  });
-}
