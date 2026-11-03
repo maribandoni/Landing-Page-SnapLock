@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SnapLock: suas memórias, seu círculo, seu espaço. Uma rede social para compartilhar fotos com amigos próximos.">
+  <meta name="theme-color" content="#f8efe3">
+  <title>SnapLock — Suas memórias. Seu círculo. Seu espaço.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#inicio" aria-label="SnapLock — início">
+      <img class="logo-image" src="assets/logo.png" alt="SnapLock">
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" id="main-nav">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#seguranca">Segurança</a>
+      <a class="nav-cta" href="#conheca" data-open-app-dialog>Conheça o app <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> Rede social de memórias</div>
+        <h1>Suas memórias.<br>Seu círculo.<br><span class="accent-text">Seu espaço.</span></h1>
+        <p>O SnapLock é uma rede social feita para você compartilhar seus melhores momentos com quem realmente importa.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#sobre">Conheça o SnapLock <span>↗</span></a>
+          <a class="underlined-link" href="#recursos">Explore os recursos <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="tiny-heart">♡</span> Mais lembranças reais. Menos pressão.</div>
+      </div>
+
+      <div class="hero-visual" aria-label="Mascote do SnapLock e fotografias de momentos especiais">
+        <div class="hero-blob"></div>
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <span class="doodle doodle-rays">✳</span>
+        <span class="doodle doodle-heart">♡</span>
+        <span class="hand-note">boas memórias<br>sempre! <b>♥</b></span>
+        <div class="photo-stack" aria-hidden="true">
+          <div class="polaroid polaroid-back"><img src="assets/avatarApoio2.jpg" alt=""></div>
+          <div class="polaroid polaroid-front"><img src="assets/avatarApoio.png" alt=""></div>
+        </div>
+        <model-viewer
+          id="mascot"
+          class="mascot"
+          src="assets/89413a83-134d-458c-b555-a15b333b.glb"
+          poster="assets/avatar.png"
+          alt="Mascote 3D do SnapLock"
+          camera-controls
+          disable-zoom
+          interaction-prompt="none"
+          camera-orbit="0deg 75deg 105%"
+        ></model-viewer>
+        <div class="floating-chip chip-memory"><span class="chip-icon">✦</span><span><b>Memórias especiais</b><small>Para guardar com carinho</small></span></div>
+        <div class="floating-chip chip-friends"><span class="avatar-dots">●●●</span><span><b>Seu círculo</b><small>Amigos de verdade</small></span></div>
+      </div>
+      <div class="hero-bottom-wave" aria-hidden="true"></div>
+    </section>
+
+    <section class="about section-wrap" id="sobre">
+      <div class="about-visual">
+        <div class="about-splash"></div>
+        <div class="phone" aria-label="Captura de tela do feed do SnapLock">
+          <img class="phone-screen" src="assets/TelaFeed.png" alt="Tela do feed do SnapLock">
+        </div>
+        <span class="decor-star">✦</span>
+      </div>
+      <div class="about-copy">
+        <div class="eyebrow">Nossa proposta</div>
+        <h2>Mais que uma rede social,<br>é um <span class="accent-text">álbum de memórias.</span></h2>
+        <p>O SnapLock foi criado para você registrar e compartilhar momentos especiais com amigos próximos, em um ambiente pensado para ser seguro, privado e acolhedor.</p>
+        <div class="promise-list">
+          <div class="promise"><span class="promise-icon">⌑</span><span><b>Privado<br>e seguro</b></span></div>
+          <div class="promise"><span class="promise-icon">♧</span><span><b>Apenas amigos<br>próximos</b></span></div>
+          <div class="promise"><span class="promise-icon">♡</span><span><b>Sem críticas<br>e julgamentos</b></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features section-wrap" id="recursos">
+      <div class="features-heading">
+        <div><div class="eyebrow">Funcionalidades</div><h2>Tudo para viver suas<br><span class="accent-text">memórias do seu jeito.</span></h2></div>
+        <p>Uma experiência simples, personalizada e pensada para aproximar as pessoas — não para criar pressão.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card feature-card-highlight">
+          <div class="feature-icon">⌑</div><span class="feature-number">01 / PRIVACIDADE</span>
+          <h3>Fotos para o seu círculo</h3><p>Compartilhe momentos que só amigos autorizados podem ver.</p><span class="card-decoration">✳</span>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">♡</div><span class="feature-number">02 / INTERAÇÃO</span>
+          <h3>Curtidas </h3><p>Reaja às publicações de forma leve, sem comentários ou mensagens privadas.</p>
+        </article>
+        <article class="feature-card feature-card-tilt">
+          <div class="feature-icon">✺</div><span class="feature-number">03 / PERSONALIZAÇÃO</span>
+          <h3>Seu estilo, suas regras</h3><p>Personalize tema e fonte para deixar o app com a sua cara.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">▧</div><span class="feature-number">04 / FOTOS</span>
+          <h3>Edite antes de postar</h3><p>Adicione legendas e ajuste suas fotos com filtros e formatos.</p>
+        </article>
+        <article class="feature-card feature-card-warm">
+          <div class="feature-icon">◷</div><span class="feature-number">05 / RETROSPECTIVAS</span>
+          <h3>Reviva cada fase</h3><p>Relembre os registros especiais do mês e do ano.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">◎</div><span class="feature-number">06 / SEU PERFIL</span>
+          <h3>Um perfil que é você</h3><p>Cuide das suas informações e mantenha seu espaço atualizado.</p>
+        </article>
+      </div>
+      <div class="feature-footnote"><span>✳</span> Feito para guardar o que importa — sem a pressão de uma rede social tradicional.</div>
+    </section>
+
+    <section class="security" id="seguranca">
+      <div class="security-inner section-wrap">
+        <div class="security-visual">
+          <div class="security-halo"></div>
+          <img src="assets/avatar.png" alt="" class="security-mascot">
+          <div class="security-sticker"><span>⌑</span><b>seu espaço,<br>suas regras</b></div>
+          <span class="security-spark spark-a">✳</span><span class="security-spark spark-b">✦</span>
+        </div>
+        <div class="security-copy">
+          <div class="eyebrow">Privacidade e segurança</div>
+          <h2>Seu espaço.<br><span class="security-accent">Suas regras.</span></h2> 
+          <p>A proposta do SnapLock é incentivar um compartilhamento mais tranquilo. O projeto prevê mecanismos de moderação e ferramentas para denunciar publicações que violem as diretrizes.</p>
+          <div class="security-points">
+            <div><span>⛨</span><b>Moderação<br>de conteúdo</b></div>
+            <div><span>⊘</span><b>Proteção contra<br>discurso de ódio</b></div>
+            <div><span>⌑</span><b>Ambiente mais<br>controlado</b></div>
+          </div>
+          <small class="disclaimer">Recursos apresentados como proposta do projeto acadêmico; a aplicação depende da implementação.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section-wrap" id="conheca">
+      <div class="cta-photo cta-photo-left"><img src="assets/finalPage.jpg" alt="Amigos aproveitando um momento juntos"></div>
+      <div class="cta-copy"><div class="eyebrow">Pronto para viver essas memórias?</div><h2>Faça parte do <span class="accent-text">SnapLock!</span></h2><p>Seu círculo. Suas memórias. Seu espaço.</p><a class="button button-primary" href="#conheca" data-open-app-dialog>Conheça o app <span>↗</span></a></div>
+      <div class="cta-photo cta-photo-right"><img src="assets/finalPage2.png" alt="Amigos compartilhando um momento"></div>
+      <span class="cta-doodle">juntos<br>é melhor ♡</span>
+    </section>
+  </main>
+
+  <dialog class="app-dialog" id="app-dialog" aria-labelledby="app-dialog-title">
+    <button class="app-dialog-close" type="button" aria-label="Fechar tela de opções do app">×</button>
+    <img class="app-dialog-logo" src="assets/snaplock-logo.png" alt="SnapLock">
+    <div class="eyebrow">Seu círculo. Suas memórias.</div>
+    <h2 id="app-dialog-title">Conheça o <span class="accent-text">SnapLock.</span></h2>
+    <p class="app-dialog-intro">Encontre o SnapLock na loja do seu celular ou deixe seu e-mail para novidades.</p>
+    <div class="app-store-links">
+      <a class="app-store-link" href="https://apps.apple.com/br/search?term=SnapLock" target="_blank" rel="noopener noreferrer">
+        <span aria-hidden="true">⌕</span>
+        <span><small>Buscar na</small><b>App Store</b></span>
+        <span class="app-store-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="app-store-link" href="https://play.google.com/store/search?q=SnapLock&amp;c=apps" target="_blank" rel="noopener noreferrer">
+        <span aria-hidden="true">▷</span>
+        <span><small>Buscar no</small><b>Google Play</b></span>
+        <span class="app-store-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+    <p class="app-store-note">O app ainda não está publicado; os botões abrem uma busca por SnapLock nas lojas.</p>
+    <form class="email-signup" id="email-signup">
+      <label for="app-email">Receba novidades por e-mail</label>
+      <div class="email-signup-fields">
+        <input id="app-email" name="email" type="email" autocomplete="email" placeholder="voce@exemplo.com" required>
+        <button class="button button-primary" type="submit">Quero novidades</button>
+      </div>
+      <p class="email-signup-note">O cadastro por e-mail ainda não está ativado.</p>
+      <p class="email-signup-status" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <footer class="site-footer">
+    <a class="logo footer-logo" href="#inicio" aria-label="SnapLock — início"><img class="logo-image" src="assets/logo.png" alt="SnapLock"></a>
+    <p>Projeto acadêmico desenvolvido pelo grupo CyberSisters · SENAI</p>
+    <nav aria-label="Links do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#recursos">Recursos</a><a href="#seguranca">Segurança</a></nav>
+    <span class="copyright">© SnapLock · Projeto de conclusão de curso</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
