@@ -17,31 +17,6 @@ if (menuButton && navigation) {
   });
 }
 
-const mascot = document.querySelector("#mascot");
-const heroVisual = document.querySelector(".hero-visual");
-
-if (mascot && heroVisual) {
-  customElements.whenDefined("model-viewer").then(() => {
-    const resetCamera = () => {
-      mascot.cameraOrbit = "0deg 75deg 105%";
-    };
-
-    heroVisual.addEventListener("pointermove", (event) => {
-      if (event.pointerType === "touch") return;
-
-      const bounds = heroVisual.getBoundingClientRect();
-      const x = (event.clientX - bounds.left) / bounds.width;
-      const y = (event.clientY - bounds.top) / bounds.height;
-      const azimuth = (x - 0.5) * 36;
-      const elevation = 75 + (0.5 - y) * 18;
-
-      mascot.cameraOrbit = `${azimuth}deg ${elevation}deg 105%`;
-    });
-
-    heroVisual.addEventListener("pointerleave", resetCamera);
-  });
-}
-
 const appDialog = document.querySelector("#app-dialog");
 
 if (appDialog instanceof HTMLDialogElement) {
@@ -67,5 +42,4 @@ if (appDialog instanceof HTMLDialogElement) {
     }
   });
 }
-
 
