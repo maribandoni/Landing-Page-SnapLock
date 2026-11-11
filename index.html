@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="SnapLock: suas memórias, seu círculo, seu espaço. Uma rede social para compartilhar fotos com amigos próximos.">
   <meta name="theme-color" content="#f8efe3">
+  <link rel="icon" type="image/jpeg" href="assets/Icone_app.jpg">
   <title>SnapLock — Suas memórias. Seu círculo. Seu espaço.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -53,17 +53,7 @@
           <div class="polaroid polaroid-back"><img src="assets/avatarApoio2.jpg" alt=""></div>
           <div class="polaroid polaroid-front"><img src="assets/avatarApoio.png" alt=""></div>
         </div>
-        <model-viewer
-          id="mascot"
-          class="mascot"
-          src="assets/89413a83-134d-458c-b555-a15b333b.glb"
-          poster="assets/avatar.png"
-          alt="Mascote 3D do SnapLock"
-          camera-controls
-          disable-zoom
-          interaction-prompt="none"
-          camera-orbit="0deg 75deg 105%"
-        ></model-viewer>
+        <img class="mascot" src="assets/avatar.png" alt="Mascote do SnapLock">
         <div class="floating-chip chip-memory"><span class="chip-icon">✦</span><span><b>Memórias especiais</b><small>Para guardar com carinho</small></span></div>
         <div class="floating-chip chip-friends"><span class="avatar-dots">●●●</span><span><b>Seu círculo</b><small>Amigos de verdade</small></span></div>
       </div>
@@ -156,7 +146,7 @@
 
   <dialog class="app-dialog" id="app-dialog" aria-labelledby="app-dialog-title">
     <button class="app-dialog-close" type="button" aria-label="Fechar tela de opções do app">×</button>
-    <img class="app-dialog-logo" src="assets/snaplock-logo.png" alt="SnapLock">
+    <img class="app-dialog-logo" src="assets/SnapLock/3.png" alt="SnapLock">
     <div class="eyebrow">Seu círculo. Suas memórias.</div>
     <h2 id="app-dialog-title">Conheça o <span class="accent-text">SnapLock.</span></h2>
     <p class="app-dialog-intro">Encontre o SnapLock na loja do seu celular.</p>
