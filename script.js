@@ -43,3 +43,37 @@ if (appDialog instanceof HTMLDialogElement) {
   });
 }
 
+const heroVisual = document.querySelector(".hero-visual");
+const mascot = heroVisual?.querySelector(".mascot");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (
+  heroVisual &&
+  mascot instanceof HTMLImageElement
+) {
+  let animationFrame = 0;
+
+  heroVisual.addEventListener("pointermove", (event) => {
+    if (event.pointerType !== "mouse") return;
+
+    const bounds = heroVisual.getBoundingClientRect();
+    const pointerX = ((event.clientX - bounds.left) / bounds.width) * 2 - 1;
+    const pointerY = ((event.clientY - bounds.top) / bounds.height) * 2 - 1;
+    const movementScale = prefersReducedMotion.matches ? 0.35 : 1;
+
+    cancelAnimationFrame(animationFrame);
+    animationFrame = requestAnimationFrame(() => {
+      mascot.style.setProperty("--pointer-x", `${pointerX * 12 * movementScale}px`);
+      mascot.style.setProperty("--pointer-y", `${pointerY * 8 * movementScale}px`);
+      mascot.style.setProperty("--pointer-tilt", `${prefersReducedMotion.matches ? 0 : pointerX * 5}deg`);
+    });
+  });
+
+  heroVisual.addEventListener("pointerleave", () => {
+    cancelAnimationFrame(animationFrame);
+    mascot.style.removeProperty("--pointer-x");
+    mascot.style.removeProperty("--pointer-y");
+    mascot.style.removeProperty("--pointer-tilt");
+  });
+}
+
